@@ -49,12 +49,15 @@ function codeAddress() {
     }
   });
 }
-
+//$("#eventImg").append("<p>" + json._embedded.events[0].images[0].url + "</p>");
+//i<json.page.size for loop
 
 function showEvents(json) {
-  for(var i=0; i<json.page.size; i++) {
+  for(var i=0; i<2; i++) {
     $("#events").append("<h4 class='center-align'>"+json._embedded.events[i].name+"</h4>");
     $("#events").append("<p class='center-align'>"+json._embedded.events[i].dates.start.localDate+"</p>");
+    $("#events").append("<p class='center-align'>"+json._embedded.events[i]._embedded.venues[0].name+"</p>");
+    $("#events").append("<img src='" + json._embedded.events[i].images[0].url + "'>");
   }
 }
 
@@ -65,7 +68,7 @@ function initMap(results, json) {
     center: {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()},
     zoom: 10
   });
-  for(var i=0; i<json.page.size; i++) {
+  for(var i=0; i<4; i++) {
     addMarker(map, json._embedded.events[i]);
   }
 }
