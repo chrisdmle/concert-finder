@@ -24,7 +24,7 @@ nav{
 .hero-text{
  color: #FEFAE0;
  text-align: center;
- padding-top: 100px;
+ padding-top: 110px;
 
 }
 .date{
@@ -73,7 +73,7 @@ nav{
   width: 100%;
   display: flex;
   border-radius: 12px;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -81,21 +81,26 @@ nav{
 }
 
 .flex-child {
-  flex:auto;
+  flex:1;
   display: none;
   width: 80%;
+  min-width: 400px;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }  
 /* Event Detail Cards */
 .card {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 100%;
+  max-width: 400px;
   max-height: fit-content;
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 30px;
-  border-radius: 10px;
+  padding: 20px;
+  border-radius: 5px;
   overflow-wrap: break-word;
 }
 
