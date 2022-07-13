@@ -1,6 +1,5 @@
 var geocoder;
 var map;
-//var searchTerm; //json._embedded.events[0]._embedded.attractions[0].name;
 var youtubeAPIKey = "AIzaSyDzcsnOAwEH0QA9xZbp9HCRQRPK323Ircw";
 const searchTerm =""
 const flexChild = document.getElementsByClassName("flex-child");
@@ -41,7 +40,7 @@ function searchResults() {
     if (status == 'OK') {
       $.ajax({
         type:"GET",
-        url:"https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&apikey=AGEiNjO7nGO6vJDiRVLhhsVBjgOHdQIb&latlong="+ latlon +"&startDateTime=" + startDate + "T00:00:00Z" +"&endDateTime=" + endDate + "T00:00:00Z",
+        url:"https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&radius=50&unit=miles&apikey=AGEiNjO7nGO6vJDiRVLhhsVBjgOHdQIb&latlong="+ latlon +"&startDateTime=" + startDate + "T00:00:00Z" +"&endDateTime=" + endDate + "T00:00:00Z",
         async:true,
         dataType: "json",
         success: function(json) {
